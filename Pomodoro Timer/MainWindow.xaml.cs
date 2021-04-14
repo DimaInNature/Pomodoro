@@ -227,5 +227,47 @@ namespace Pomodoro_Timer
                 DragMove();
             }
         }
+
+        bool conditionTray = true; //полный размер
+
+        
+
+        private void Tray_Click(object sender, RoutedEventArgs e)
+        {
+            if (conditionTray)
+            {
+                ExitBut.Height = 40;
+                ExitBut.Width = 40;
+                Pomodoro_Timer.Height = 150;
+                Pomodoro_Timer.Width = 300;
+                countdownTimer.Height = 50;
+                countdownTimer.Width = 130;
+                countdownTimer.FontSize = 30;
+                SettingsButton.Visibility = Visibility.Hidden;
+                StartPauseButton.Height = 40;
+                StartPauseButton.Width = 40;
+                DoneBreakButton.Width = 40;
+                DoneBreakButton.Height = 40;
+                RestartButton.Height = 40;
+                RestartButton.Width = 40;
+                conditionTray = false;
+            }
+            else
+            {
+                Pomodoro_Timer.Height = 450;
+                Pomodoro_Timer.Width = 800;
+                countdownTimer.Height = 150; 
+                countdownTimer.Width = 400; 
+                countdownTimer.FontSize = 100;
+                SettingsButton.Visibility = Visibility.Visible;
+                StartPauseButton.Height = 60;
+                StartPauseButton.Width = 60;
+                DoneBreakButton.Width = 60;
+                DoneBreakButton.Height = 60;
+                RestartButton.Height = 60;
+                RestartButton.Width = 60;
+                conditionTray = true;
+            }
+        }
     }
 }

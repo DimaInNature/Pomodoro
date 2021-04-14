@@ -9,7 +9,7 @@
         MouseDown="Window_MouseDown"
         AllowsTransparency="True"
         mc:Ignorable="d"
-        Title="Pomodoro Timer" Height="450" Width="800" MinWidth="800" MinHeight="450">
+        Title="Pomodoro Timer" Height="450" Width="800">
 
     <Window.Resources>
         <Style x:Key="MyButtonStyle" TargetType="Button">
@@ -38,7 +38,8 @@
             <RowDefinition Height="10*"></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0"
+        <Button x:Name="ExitBut"
+                Grid.Row="0"
                 Margin="0,0,5,40"
                 Width="30"
                 Height="30"
@@ -49,6 +50,20 @@
                 Style="{StaticResource MyButtonStyle}"
                 Background="Transparent"
                 Click="Exit_Click"/>
+
+        <Button Grid.Row="5" x:Name="TrayBut"
+                Margin="0,0,5,10"
+                Width="30"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Content="//"
+                Foreground="White"
+                FontSize="20"
+                Style="{StaticResource MyButtonStyle}"
+                Background="Transparent"
+                Click="Tray_Click"/>
+        
         <Label x:Name="countdownTimer" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bavro" FontSize="100" Grid.Row="1" Foreground="White"/>
         <Button Style="{StaticResource MyButtonStyle}" x:Name="SettingsButton" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Center" Width="45" Click="SettingsButton_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="45" Margin="15,16,0,16">
             <Button.Background>
