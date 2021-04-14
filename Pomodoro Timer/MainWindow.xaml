@@ -9,7 +9,7 @@
         MouseDown="Window_MouseDown"
         AllowsTransparency="True"
         mc:Ignorable="d"
-        Title="Pomodoro Timer" Height="450" Width="800">
+        Title="Pomodoro" Height="450" Width="800">
 
     <Window.Resources>
         <Style x:Key="MyButtonStyle" TargetType="Button">
