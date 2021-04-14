@@ -206,5 +206,10 @@ namespace Pomodoro_Timer
             TimeSpan timeSpan = TimeSpan.FromSeconds(time);
             return timeSpan.ToString(@"hh\:mm\:ss");
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
