@@ -35,14 +35,16 @@ namespace Pomodoro_Timer
             {
                 pomodoroLongBreakOccuranceCombobox.Items.Add(i.ToString());
             }
-            //add population of songs
+            #region Добавление песен
 
             pomodoroDurationCombobox.SelectedIndex = Pomodoro.Properties.Settings.Default.pomodoroDuration - 1;
             pomodoroBreakCombobox.SelectedIndex = Pomodoro.Properties.Settings.Default.pomodoroBreak - 1;
             pomodoroLongBreakCombobox.SelectedIndex = Pomodoro.Properties.Settings.Default.pomodoroLongBreak - 1;
             pomodoroLongBreakOccuranceCombobox.SelectedIndex = Pomodoro.Properties.Settings.Default.pomodoroLongBreakOccurance - 1;
 
-            //select one of those thingys
+            #endregion
+
+            //выборка какой-то конкретной музыкальной дорожки
             var checkedValueAlarmSounds = alarmSoundsPanel.Children.OfType<RadioButton>()
             .FirstOrDefault(r => r.Name.Equals(Pomodoro.Properties.Settings.Default.alarmSounds));
             if(checkedValueAlarmSounds != null)

@@ -28,13 +28,13 @@
         <Button x:Name="cancelButton" Content="Отменить" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Click="cancelButton_Click" Grid.Column="1" Grid.Row="4" Height="20" Margin="0,13,10.5,13.5"/>
 
         <UniformGrid Grid.Row="1" Grid.Column="1" Columns="2" Rows="2" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
-            <Label Content="Pomodoro Length" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
+            <Label Content="Длительность Pomodoro" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
             <ComboBox x:Name="pomodoroDurationCombobox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250"/>
-            <Label Content="Short Break Length" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
+            <Label Content="Длительность короткого перерыва" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
             <ComboBox x:Name="pomodoroBreakCombobox" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="250"/>
-            <Label Content="Long Break Length" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
+            <Label Content="Длительность долгого перерыва" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
             <ComboBox x:Name="pomodoroLongBreakCombobox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250"/>
-            <Label Content="Long Break After" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
+            <Label Content="Длительность очень долгого перерыва" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
             <ComboBox x:Name="pomodoroLongBreakOccuranceCombobox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.137,-1.636"/>
         </UniformGrid>
 
