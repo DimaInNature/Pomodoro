@@ -211,5 +211,13 @@ namespace Pomodoro_Timer
         {
             Application.Current.Shutdown();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 }
