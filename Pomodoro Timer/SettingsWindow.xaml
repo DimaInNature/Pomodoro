@@ -5,6 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pomodoro_Timer"
         mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen"
         Title="Settings Window" Height="450" Width="800" MinWidth="800" MinHeight="450">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -13,16 +17,17 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="5*"></RowDefinition>
             <RowDefinition Height="6*"></RowDefinition>
             <RowDefinition Height="5*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Click="applyButton_Click" Grid.Column="1" Grid.Row="3" Height="20" Margin="0,13,120.5,13.5"/>
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Click="cancelButton_Click" Grid.Column="1" Grid.Row="3" Height="20" Margin="0,13,10.5,13.5"/>
+        <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Click="applyButton_Click" Grid.Column="1" Grid.Row="4" Height="20" Margin="0,13,120.5,13.5"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Click="cancelButton_Click" Grid.Column="1" Grid.Row="4" Height="20" Margin="0,13,10.5,13.5"/>
 
-        <UniformGrid Grid.Row="0" Grid.Column="1" Columns="2" Rows="2" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
+        <UniformGrid Grid.Row="1" Grid.Column="1" Columns="2" Rows="2" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
             <Label Content="Pomodoro Length" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
             <ComboBox x:Name="pomodoroDurationCombobox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250"/>
             <Label Content="Short Break Length" FontFamily="Calibri" FontWeight="Bold" FontSize="14" Foreground="#FF635F5F"></Label>
@@ -33,8 +38,8 @@
             <ComboBox x:Name="pomodoroLongBreakOccuranceCombobox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.137,-1.636"/>
         </UniformGrid>
 
-        <Label Content="Alarm" Grid.Row="1" Grid.Column="1" Foreground="#FFFF4F4F" FontSize="16" FontWeight="Bold" FontFamily="Calibri"></Label>
-        <UniformGrid x:Name="alarmSoundsPanel" Grid.Row="1" Grid.Column="1" Columns="4" Height="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,26.5,0,14">
+        <Label Content="Alarm" Grid.Row="2" Grid.Column="1" Foreground="#383660" FontSize="16" FontWeight="Bold" FontFamily="Calibri"></Label>
+        <UniformGrid x:Name="alarmSoundsPanel" Grid.Row="2" Grid.Column="1" Columns="4" Height="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,26.5,0,14">
             <RadioButton x:Name="NoneAlarm" GroupName="alarmSounds" Content="Mute" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton x:Name="AlarmBeep" GroupName="alarmSounds" Content="Alarm Beep" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton x:Name="Beeps" GroupName="alarmSounds" Content="Beeps" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -64,8 +69,8 @@
             <RadioButton x:Name="WindUp" GroupName="alarmSounds" Content="Wind Up" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </UniformGrid>
 
-        <Label Content="Background Noise" Grid.Row="2" Grid.Column="1" Foreground="#FFFF4F4F" FontSize="16" FontWeight="Bold" FontFamily="Calibri"></Label>
-        <UniformGrid Name="workingSoundsPanel" Grid.Row="2" Grid.Column="1" Columns="4" Height="70" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,29,0,18.5">
+        <Label Content="Background Noise" Grid.Row="3" Grid.Column="1" Foreground="#383660" FontSize="16" FontWeight="Bold" FontFamily="Calibri"></Label>
+        <UniformGrid Name="workingSoundsPanel" Grid.Row="3" Grid.Column="1" Columns="4" Height="70" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,29,0,18.5">
             <RadioButton x:Name="Mute" GroupName="workingSounds" Content="Mute" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton x:Name="Classroom" GroupName="workingSounds" Content="Classroom" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton x:Name="CofficeShop" GroupName="workingSounds" Content="Coffee Shop" HorizontalAlignment="Left" VerticalAlignment="Top"/>

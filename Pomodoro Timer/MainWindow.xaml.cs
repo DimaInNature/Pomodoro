@@ -22,11 +22,14 @@ namespace Pomodoro_Timer
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        #region Background градиент
+
         private readonly LinearGradientBrush workingGradient = new LinearGradientBrush(
-            Color.FromArgb(255, 255, 100, 55),
-            Color.FromArgb(255, 251, 68, 116),
+            Color.FromRgb(56, 54, 96),
+            Color.FromRgb(240, 131, 218),
             new Point(0, 0),
-            new Point(0.55, 0.52));
+            new Point(0, 1));
 
         private readonly LinearGradientBrush breakGradient = new LinearGradientBrush(
             Color.FromArgb(255, 23, 232, 217),
@@ -34,13 +37,18 @@ namespace Pomodoro_Timer
             new Point(0, 0),
             new Point(0.74, 0.73));
 
-        //Saved user settings
+        #endregion
+
+        #region Сохранённые настройки пользователя
+
         public static int pomodoroDuration = Pomodoro.Properties.Settings.Default.pomodoroDuration * 60; //25 * 60; 480 max 
         public static int pomodoroBreak = Pomodoro.Properties.Settings.Default.pomodoroBreak * 60; //5 * 60; 480 max
         public static int pomodoroLongBreak = Pomodoro.Properties.Settings.Default.pomodoroLongBreak * 60; //15 * 60; 480 max
         public static int pomodoroLongBreakOccurance = Pomodoro.Properties.Settings.Default.pomodoroLongBreakOccurance; // 100 max
         public static string workingSounds = Environment.CurrentDirectory + @"\Assets\Sounds\workingSounds\bgm_" + Pomodoro.Properties.Settings.Default.workingSounds + ".mp3";
         public static string alarmSounds = Environment.CurrentDirectory + @"\Assets\Sounds\alarmSounds\alm_" + Pomodoro.Properties.Settings.Default.alarmSounds + ".mp3";
+
+        #endregion
 
         public static MP3Player alarmSoundsOGG;
         public static MP3Player workingSoundsOGG;
